@@ -11,7 +11,7 @@ This file outlines the test environment and steps used to validate the `scan_vul
 - **Virtualization:** Proxmox
 - **Shell:** 5.1.16(1)-release 
 - **Trivy version:** 0.62.1 
-- **jq version:** 
+- **jq version:** 1.6
 
 The VM was configured with:
 - 2 vCPUs
