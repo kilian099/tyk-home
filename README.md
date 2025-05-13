@@ -19,6 +19,12 @@ Each row in the CSV includes:
 
 If a vulnerability appears in more than one image, it is consolidated into a single row with all image names listed in the **`source`** column.
 
+## Features
+
+- Scans multiple container images
+- Outputs raw JSON and processed CSV
+- Deduplicates vulnerabilities by CVE + package
+
 ## Images Scanned
 
 - `tykio/tyk-gateway`
@@ -31,13 +37,14 @@ You can modify the list of images inside the script.
 - `scan_vulnerabilities.sh`: Shell script to run Trivy scans and generate the CSV report
 - `output_json/`: Directory where raw Trivy JSON outputs are stored
 - `vulnerabilities_report.csv`: Sample consolidated vulnerability report (output)
-  
+
 ## How to Run the Script
 
 ### **Requirements**
 - Bash
 - [Trivy](https://aquasecurity.github.io/trivy/v0.37.3/getting-started/installation/)
 - `jq` (command-line JSON processor)
+- awk (concatenate results in CSV file)
 
 ### **Steps**
 1. Clone this repository
